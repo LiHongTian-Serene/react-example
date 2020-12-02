@@ -17,6 +17,7 @@ class Blog extends React.Component {
     }
 
     componentDidMount() {
+        //const URL = "http://localhost:3000/src/mock/api.json";
         fetch('./mock/blog.json')
         .then((res) =>{
             console.log(res)

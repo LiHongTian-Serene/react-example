@@ -14,23 +14,8 @@ class Blog extends React.Component {
             FavoritesCount: 2800,
             blogContainerText: 'On this page we’ve listed some React-related On this page we’ve listed some React-related communities that you can be a part of; see the other pages in this section for additional online and in-person learning materials.'
         }
-    }
-
-    componentDidMount() {
-        fetch('./mock/blog.json')
-        .then((res) =>{
-            console.log(res)
-            return res.json();
-        }).then((res) =>{
-             this.setState({
-                blogName:res.blogName,
-                date: res.date,
-                ForwardCount: res.ForwardCount,
-                CommentsCount: res.CommentsCount,
-                FavoritesCount: res.FavoritesCount,
-                blogContainerText: res.blogContainerText
-            })
-        })
+        this.BlogHandleClick = this.BlogHandleClick.bind(this);
+        this.BlogDetailsHandleClick = this.BlogDetailsHandleClick.bind(this);
     }
 
     render(){
@@ -38,9 +23,9 @@ class Blog extends React.Component {
             <div className='blog'>
                     <div className="blogTitle">
                         <div className="blogName">{this.state.blogName} Blog</div>
-                        <div className="blogMore" value={this.state.type}>MORE {String('>')}</div>
+                        <div className="blogMore" value={this.state.type} onClick={this.BlogHandleClick}>MORE {String('>')}</div>
                     </div>
-                    <div className="blogContainer" value={this.state.type}>
+                    <div className="blogContainer" value={this.state.type} onClick={this.BlogDetailsHandleClick}>
                         <div className='blogContainerTitle'>
                             <div><img src={Gary} alt={this.state.blogName}/></div>
                             <div>

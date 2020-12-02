@@ -17,19 +17,18 @@ class Blog extends React.Component {
     }
 
     componentDidMount() {
+        //const URL = "http://localhost:3000/src/mock/api.json";
         fetch('./mock/blog.json')
         .then((res) =>{
             console.log(res)
             return res.json();
         }).then((res) =>{
-             this.setState({
-                blogName:res.blogName,
-                date: res.date,
-                ForwardCount: res.ForwardCount,
-                CommentsCount: res.CommentsCount,
-                FavoritesCount: res.FavoritesCount,
-                blogContainerText: res.blogContainerText
-            })
+            res = {
+                blogName: 'sss'
+            }
+            this.setState({
+                blogName: res.blogName
+            })
         })
     }
 
