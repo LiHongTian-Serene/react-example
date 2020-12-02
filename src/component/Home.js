@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import LinkSectionItem from './linkSectionItem'
 import Banner from './banner'
 import Blog from './blog'
 import '../index.css';
@@ -21,11 +22,7 @@ class Home extends React.Component {
                 <div className='linkSection'>
                     {
                         this.state.linkItems.map((item) => {
-                            return (
-                                <div key={item.id}>
-                                    <a href=''>{item}</a>
-                                </div>
-                                )
+                            return <LinkSectionItem key={item.toString()} value={item} />
                         })
                     }
                 </div>
