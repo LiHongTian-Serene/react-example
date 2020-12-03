@@ -198,6 +198,10 @@ text-decoration:none;
   -webkit-box-orient: vertical;
 }
 
+.ContainerTextStyle::after{
+  content: 'all';
+}
+
 .blogContainerTextStyle{
   -webkit-line-clamp: 4;
 }

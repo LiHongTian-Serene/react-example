@@ -3,7 +3,13 @@ const URL = 'http://localhost:3000/';
 console.log(URL + '?');
 
 const fetchData = (url, params) => {
-    let result = fetch(url).then((res) => {
+    let result = fetch(url, {
+        method: 'GET',
+            headers: {
+                'Accept': 'application/json;charset=UTF-8'
+            },
+            body: JSON.stringify('BLOG_DETAILS')
+    }).then((res) => {
         return res.json();
     }).then((res) => {
         console.log(res)

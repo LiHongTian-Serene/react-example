@@ -1,4 +1,7 @@
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
@@ -78,7 +81,7 @@ text-decoration:none;
 .banner{
   border-radius: 5px;
   box-shadow: #e7e7e7 0px 0px 5px 2px;
-  height: 150px;
+  height: 200px;
 }
 
 .linkSection {
@@ -98,7 +101,7 @@ text-decoration:none;
   line-height: 110px;
   border-radius: 5px;
   background: white;
-  margin: 25px 15px 7px 15px;
+  margin: 30px 15px;
   border-radius: 5px;
   box-shadow: #e7e7e7 0px 0px 5px 2px;
 }
@@ -134,10 +137,9 @@ text-decoration:none;
 
 .blogTitle{
   display: block;
-  height: 30px;
   line-height: 30px;
   padding: 7px 0px;  
-  font-weight: 600;
+  font-weight: 500;
 }
 .blogTitle::after{
   clear: both;
@@ -163,10 +165,11 @@ text-decoration:none;
 
 .blogContainer, .newsContainer{
   display: block;
+  margin: 30px 0px;
   background: white;
   border-radius: 5px;
   box-shadow: #e7e7e7 0px 0px 5px 2px;
-  padding: 5px 15px 0px 15px;
+  padding: 0px 15px;
   min-height: 150px;
 }
 
@@ -195,15 +198,8 @@ text-decoration:none;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-}
-
-.blogContainerTextStyle{
-  -webkit-line-clamp: 4;
-}
-
-.newsContainerTextStyle{
-  -webkit-line-clamp: 5;
 }
 
 .blogAction{
@@ -211,15 +207,14 @@ text-decoration:none;
   font-weight: normal;
   display: flex;
   line-height: 35px;
+  margin-bottom: 15px;
 }
 .blogAction div{
   flex: 1;
 }
 
 .newsContainer{
-  display: flex;
-  background: none;
-  box-shadow: none;
+  display: flex
 }
 
 .newsContainer .newImg, .newsContainer .newsDetails {

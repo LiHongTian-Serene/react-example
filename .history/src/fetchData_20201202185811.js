@@ -3,7 +3,9 @@ const URL = 'http://localhost:3000/';
 console.log(URL + '?');
 
 const fetchData = (url, params) => {
-    let result = fetch(url).then((res) => {
+    let result = fetch(url,, {
+        body: JSON.stringify('BLOG_DETAILS')
+    }).then((res) => {
         return res.json();
     }).then((res) => {
         console.log(res)

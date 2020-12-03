@@ -78,12 +78,13 @@ text-decoration:none;
 .banner{
   border-radius: 5px;
   box-shadow: #e7e7e7 0px 0px 5px 2px;
-  height: 150px;
+  height: 200px;
 }
 
 .linkSection {
   display:flex;
   width: 100%;
+  margin: 30px 15px 7px 15px;
 } 
 
 .linkSection::after{
@@ -98,7 +99,7 @@ text-decoration:none;
   line-height: 110px;
   border-radius: 5px;
   background: white;
-  margin: 25px 15px 7px 15px;
+  
   border-radius: 5px;
   box-shadow: #e7e7e7 0px 0px 5px 2px;
 }
@@ -134,7 +135,6 @@ text-decoration:none;
 
 .blogTitle{
   display: block;
-  height: 30px;
   line-height: 30px;
   padding: 7px 0px;  
   font-weight: 600;
@@ -163,10 +163,11 @@ text-decoration:none;
 
 .blogContainer, .newsContainer{
   display: block;
+  margin: 30px 0px;
   background: white;
   border-radius: 5px;
   box-shadow: #e7e7e7 0px 0px 5px 2px;
-  padding: 5px 15px 0px 15px;
+  padding: 10px 15px 0px 15px;
   min-height: 150px;
 }
 
@@ -211,6 +212,7 @@ text-decoration:none;
   font-weight: normal;
   display: flex;
   line-height: 35px;
+  margin-bottom: 15px;
 }
 .blogAction div{
   flex: 1;

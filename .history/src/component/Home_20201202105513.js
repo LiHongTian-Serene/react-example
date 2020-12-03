@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import LinkSectionItem from './linkSectionItem'
 import Banner from './banner'
-import Blog from './blog/blog'
+import Blog from './blog'
 import '../index.css';
-import News from './news/news';
+import News from './news';
 
 class Home extends React.Component {
     constructor(props) {

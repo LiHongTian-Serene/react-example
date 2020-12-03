@@ -9,7 +9,6 @@ const fetchData = (url, params) => {
         console.log(res)
         return res;
     })
-    
     return result
 }
 

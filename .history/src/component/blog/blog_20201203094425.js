@@ -1,5 +1,6 @@
 import React from 'react';
-import Gary from '../img/Gary.png';
+import Gary from '../../img/Gary.png';
+import fetchData from '../../fetchData'
 
 class Blog extends React.Component {    
     constructor(props){
@@ -17,19 +18,16 @@ class Blog extends React.Component {
     }
 
     componentDidMount() {
-        fetch('./mock/blog.json')
-        .then((res) =>{
-            console.log(res)
-            return res.json();
-        }).then((res) =>{
-             this.setState({
+        fetchData('./mock/blogDetails.json').then((res) => {
+            console.log(res);
+            this.setState({
                 blogName:res.blogName,
                 date: res.date,
                 ForwardCount: res.ForwardCount,
                 CommentsCount: res.CommentsCount,
                 FavoritesCount: res.FavoritesCount,
                 blogContainerText: res.blogContainerText
-            })
+                })
         })
     }
 
